@@ -18,7 +18,8 @@ RUN \
  wget --no-check-certificate https://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
  tar xvf $SOLR.tgz && \
  rm -v $SOLR.tgz && \
- mv $SOLR /opt/solr
+ mv $SOLR /opt/solr && \
+ chown dockeruser:dockeruser /opt/solr
 
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
