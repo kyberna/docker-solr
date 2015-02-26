@@ -27,5 +27,5 @@ RUN chmod +x /*.sh && \
 	chown docker:docker /run.sh
 
 USER docker:docker
-EXPOSE 8080
+EXPOSE 8983
 CMD ["/run.sh"]
