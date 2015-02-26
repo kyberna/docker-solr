@@ -6,8 +6,10 @@ Actual Version: 5.0.0
 Core Dir: /solr/core
 [optional] Data Dir: /data
 [optional] Solr Options: -e SOLR_OPTS
+[optional] Place init.sh into your /solr dir to do additional things on startup. (eg logfile cleanup or schema.xml update or something else.)
 
 ### Usage example
+
 $docker run -itd -m 2g \
 	-v hostDir/solr:/solr \
 	-v hostDir/data:/data \
