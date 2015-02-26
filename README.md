@@ -11,7 +11,7 @@ Core Dir: /solr/core
 ### Usage example
 
 	$ docker run -itd -m 2g \
-	-v hostDir/solr:/solr \
-	-v hostDir/data:/data \
-	-e SOLR_OPTS="-Duser.datadir=/data/solr -Dsolr.log=/data/solr/logs" \
-	kyberna/solr
+	        -v hostDir/solr:/solr \
+	        -v hostDir/data:/data \
+	        -e SOLR_OPTS="-Duser.datadir=/data/solr -Dsolr.log=/data/solr/logs" \
+	        kyberna/solr
