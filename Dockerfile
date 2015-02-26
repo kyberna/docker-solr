@@ -4,11 +4,11 @@ MAINTAINER Seti <sebastian.koehlmeier@kyberna.com>
 RUN \
 	apt-get update && \
 	DEBIAN_FRONTEND=noninteractive \
-		apt-get -y install wget \
+		apt-get -y install wget openssh-client \
 	&& \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* && \
-	useradd -u 1000 -m dockeruser
+	useradd -d /home/docker -u 1000 -m -s /bin/bash docker
 
 ENV SOLR_VERSION 5.0.0
 ENV SOLR solr-$SOLR_VERSION
