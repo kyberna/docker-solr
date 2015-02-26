@@ -5,6 +5,4 @@ if [ -e /solr/init.sh ];then
 	source 
 fi
  
-cd /opt/solr/server
-java -Denable.master=true -Djetty.home=/opt/solr/server -Dsolr.solr.home=/opt/solr/core -Duser.datadir=/data/solr -Dsolr.log=/data/solr/logs -jar start.jar
-cd /
+/opt/solr/bin/solr -f -a $SOLR_OPTS
