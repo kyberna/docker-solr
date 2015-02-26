@@ -15,7 +15,7 @@ ENV SOLR solr-$SOLR_VERSION
 
 #TODO: symlink instead of 'mv' as on makuk66/docker-solr
 RUN \
- wget https://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
+ wget --no-check-certificate https://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
  tar xvf $SOLR.tgz && \
  rm -v $SOLR.tgz && \
  mv $SOLR /opt/solr
