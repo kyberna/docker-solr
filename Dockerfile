@@ -18,14 +18,14 @@ RUN \
  wget --no-check-certificate https://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
  tar xvf $SOLR.tgz && \
  rm -v $SOLR.tgz && \
- mv $SOLR /opt/solr && \
- chown docker:docker /opt/solr -R
+ mv $SOLR /opt/solr
  
-
-USER docker:docker
 ADD run.sh /run.sh
 RUN chmod +x /*.sh && \
-	ln -s /solr/core /opt/solr/core
+	ln -s /solr/core /opt/solr/core && \
+	chown docker:docker /opt/solr -R && \
+	chown docker:docker /run.sh
 
+USER docker:docker
 EXPOSE 8080
 CMD ["/run.sh"]
