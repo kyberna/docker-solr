@@ -19,11 +19,13 @@ RUN \
  tar xvf $SOLR.tgz && \
  rm -v $SOLR.tgz && \
  mv $SOLR /opt/solr && \
- chown docker:docker /opt/solr -R
+ chown docker:docker /opt/solr -R && \
+ 
 
+USER docker:docker
 ADD run.sh /run.sh
-RUN chmod +x /*.sh
+RUN chmod +x /*.sh && \
+	ln -s /solr/core /opt/solr/core
 
 EXPOSE 8080
-USER 1000:1000
 CMD ["/run.sh"]
