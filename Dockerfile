@@ -19,7 +19,7 @@ RUN \
  tar xvf $SOLR.tgz && \
  rm -v $SOLR.tgz && \
  mv $SOLR /opt/solr && \
- chown dockeruser:dockeruser /opt/solr -R
+ chown docker:docker /opt/solr -R
 
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
