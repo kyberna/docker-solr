@@ -11,11 +11,10 @@ RUN \
 ENV SOLR_VERSION 4.10.4
 ENV SOLR solr-$SOLR_VERSION
 RUN mkdir -p /opt && \
-	wget -nv --no-check-certificate --output-document=/opt/$SOLR.tgz https://dist.apache.org/repos/dist/release/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
+	wget -nv --output-document=/opt/$SOLR.tgz https://dist.apache.org/repos/dist/release/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
 	tar -C /opt --extract --file /opt/$SOLR.tgz && \
 	rm /opt/$SOLR.tgz && \
-	ln -s /opt/$SOLR /opt/solr && \
-	ln -s /solr/core /opt/solr/server/solr
+	ln -s /opt/$SOLR /opt/solr
 		
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
