@@ -2,8 +2,7 @@
 Forked from pataquets/docker-solr.
 
 ## Description
-- Actual Version: 5.0.0
-- Legacy Version: 4.10.4
+- Actual Version: 5.1.0
 - Core Dir: /solr/core
 - [optional] Data Dir: /data
 - [optional] Solr Options: -e SOLR_OPTS
