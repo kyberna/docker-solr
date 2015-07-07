@@ -1,8 +1,7 @@
  #!/bin/bash
 
 if [ -e /solr/init.sh ];then
-	/solr/init.sh
-	source 
+	source /solr/init.sh
 fi
  
 /opt/solr/bin/solr -f -a $SOLR_OPTS
