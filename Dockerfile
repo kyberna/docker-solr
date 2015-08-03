@@ -1,4 +1,4 @@
-FROM tifayuki/java:7
+FROM java:8-jre
 MAINTAINER Seti <sebastian.koehlmeier@kyberna.com>
 
 RUN \
