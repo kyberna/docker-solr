@@ -27,5 +27,5 @@ Environment Vars
 ===
 - **SOLR_OPTS**: set solr jvm options.
 - **SOLR_MEM**: set solr memory. default: 1g.
-
+- **SOLR_HOME**: set solr home dir. default: /solr/core.
 
