@@ -26,6 +26,6 @@ docker run -itd -m 2g \
 Environment Vars
 ===
 - **SOLR_OPTS**: set solr jvm options.
-- **SOLR_MEM**: set solr memory. default: 1g.
-- **SOLR_HOME**: set solr home dir. default: /solr/core.
-
+- **SOLR_MEM**: set solr memory. default: 1g
+- **SOLR_HOME**: set solr home dir. default: /solr/core
+- **LOG4J_PROPS**: set log4j properties fiel. default: /solr/core/log4j.properties
