@@ -11,7 +11,7 @@ RUN \
 ENV SOLR_VERSION 5.0.0
 ENV SOLR solr-$SOLR_VERSION
 RUN mkdir -p /opt && \
-	wget -nv --no-check-certificate --output-document=/opt/$SOLR.tgz https://dist.apache.org/repos/dist/release/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
+	wget -nv --no-check-certificate --output-document=/opt/$SOLR.tgz http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
 	tar -C /opt --extract --file /opt/$SOLR.tgz && \
 	rm /opt/$SOLR.tgz && \
 	ln -s /opt/$SOLR /opt/solr && \
