@@ -13,7 +13,7 @@ if [ ! $SOLR_HOME ]; then
 fi
 
 if [ ! $LOG4J_PROPS ]; then
-	LOG4J_PROPS="/solr/core/log4j.properties"
+	LOG4J_PROPS=/solr/core/log4j.properties
 fi
 
 /opt/solr/bin/solr -f -a $SOLR_OPTS -m $SOLR_MEM -s $SOLR_HOME
