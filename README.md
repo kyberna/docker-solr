@@ -13,7 +13,7 @@ Description
 Usage example
 ===
 
-```
+```bash
 docker run -itd -m 2g \
 	-v hostDir/solr:/solr \
 	-v hostDir/data:/data \
