@@ -1,4 +1,4 @@
-FROM java:jdk
+FROM java:jre
 MAINTAINER Seti <sebastian.koehlmeier@kyberna.com>
 
 RUN \
