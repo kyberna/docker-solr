@@ -4,7 +4,7 @@ Forked from pataquets/docker-solr.
 ---
 Description
 ===
-- Actual Version: 6.0.0
+- Actual Version: 6.0.1
 - Core Dir: /solr/core
 - [optional] Data Dir: /data
 - [optional] Place init.sh into your /solr dir to do additional things on startup. (eg logfile cleanup or schema.xml update or something else.)
