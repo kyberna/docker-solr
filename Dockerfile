@@ -8,7 +8,7 @@ RUN \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
-ENV SOLR_VERSION 6.0.1
+ENV SOLR_VERSION 6.1.0
 ENV SOLR solr-$SOLR_VERSION
 RUN mkdir -p /opt && \
 	wget -nv --no-check-certificate --output-document=/opt/$SOLR.tgz https://dist.apache.org/repos/dist/release/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
