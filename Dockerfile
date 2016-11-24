@@ -8,14 +8,13 @@ RUN \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
-ENV SOLR_VERSION 6.2.0
+ENV SOLR_VERSION 6.3.0
 ENV SOLR solr-$SOLR_VERSION
 RUN mkdir -p /opt && \
 	wget -nv --no-check-certificate --output-document=/opt/$SOLR.tgz https://dist.apache.org/repos/dist/release/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
 	tar -C /opt --extract --file /opt/$SOLR.tgz && \
 	rm /opt/$SOLR.tgz && \
-	ln -s /opt/$SOLR /opt/solr && \
-	ln -s /solr/core /opt/solr/server/solr
+	ln -s /opt/$SOLR /opt/solr
 
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
