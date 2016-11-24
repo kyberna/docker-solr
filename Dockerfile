@@ -8,7 +8,7 @@ ENV SOLR solr-$SOLR_VERSION
 
 RUN \
 	addgroup -S -g $SOLR_UID $SOLR_USER && \
-	adduser -S -u $SOLR_UID -g $SOLR_USER $SOLR_USER
+	adduser -S -u $SOLR_UID -g $SOLR_USER $SOLR_USER && \
 	apt-get update && \
 	DEBIAN_FRONTEND=noninteractive \
 	apt-get -y install wget openssh-client lsof curl procps && \
