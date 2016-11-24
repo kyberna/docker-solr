@@ -19,7 +19,9 @@ RUN mkdir -p /opt && \
 	wget -nv --no-check-certificate --output-document=/opt/$SOLR.tgz https://dist.apache.org/repos/dist/release/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
 	tar -C /opt --extract --file /opt/$SOLR.tgz && \
 	rm /opt/$SOLR.tgz && \
-	ln -s /opt/$SOLR /opt/solr
+	ln -s /opt/$SOLR /opt/solr && \
+	chown -R $SOLR_USER:$SOLR_USER /opt/solr && \
+	chown -R $SOLR_USER:$SOLR_USER /opt/$SOLR
 
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
