@@ -30,4 +30,4 @@ Environment Vars
 - **SOLR_CLOUD**: set to true to start with -c flag.
 - **SOLR_MEM**: set solr memory. default: 1g
 - **SOLR_HOME**: set solr home dir. default: /solr/core
-- **LOG4J_PROPS**: set log4j properties fiel. default: /solr/core/log4j.properties
+- **LOG4J_PROPS**: set log4j properties file. default: /solr/core/log4j.properties

@@ -20,7 +20,7 @@ if [ $SOLR_CLOUD ];
 then
 	SOLR_OPTS="-c $SOLR_OPTS"
 else
-	ln -s /solr/core /opt/solr/server/solr
+	ln -s $SOLR_HOME /opt/solr/server/solr
 fi
 
 /opt/solr/bin/solr -f -a $SOLR_OPTS -m $SOLR_MEM -s $SOLR_HOME
