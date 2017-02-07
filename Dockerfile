@@ -3,7 +3,7 @@ MAINTAINER Seti <sebastian.koehlmeier@kyberna.com>
 
 ENV SOLR_USER solr
 ENV SOLR_UID 1000
-ENV SOLR_VERSION 6.4.0
+ENV SOLR_VERSION 6.4.1
 ENV SOLR solr-$SOLR_VERSION
 
 RUN \
