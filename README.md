@@ -4,7 +4,7 @@ Forked from pataquets/docker-solr.
 ---
 Description
 ===
-- latest Version: 6.5.1
+- latest Version: 6.6.0
 - Core Dir: /solr/core
 - SOLR_CLOUD flag (since 6.3.0)
 - [optional] Data Dir: /data
