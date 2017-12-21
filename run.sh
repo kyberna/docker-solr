@@ -21,7 +21,7 @@ then
 	SOLR_CLOUD="-c"
 	if [ $ZK_HOST ];
 	then
-		$ZK_HOST="-z $ZK_HOST"
+		ZK_HOST="-z $ZK_HOST"
 	fi
 else
 	ln -s $SOLR_HOME /opt/solr/server/solr
