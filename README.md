@@ -7,6 +7,7 @@ Description
 - latest Version: 7.1.0
 - Core Dir: /solr/core
 - SOLR_CLOUD flag (since 6.3.0)
+- ZK_HOST flag (since 6.6.2)
 - [optional] Data Dir: /data
 - [optional] Place init.sh into your /solr dir to do additional things on startup. (eg logfile cleanup or schema.xml update or something else.)
 
@@ -28,6 +29,7 @@ Environment Vars
 ===
 - **SOLR_OPTS**: set solr jvm options.
 - **SOLR_CLOUD**: set to true to start with -c flag.
+- **ZK_HOST**: set external zookeeper if in cloud mode, example: localhost:2181
 - **SOLR_MEM**: set solr memory. default: 1g
 - **SOLR_HOME**: set solr home dir. default: /solr/core
 - **LOG4J_PROPS**: set log4j properties file. default: /solr/core/log4j.properties
