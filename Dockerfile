@@ -1,5 +1,5 @@
-FROM java:jre
-MAINTAINER Seti <sebastian.koehlmeier@kyberna.com>
+FROM openjdk:8-jre-stretch
+LABEL maintainer="Seti <sebastian.koehlmeier@kyberna.com>"
 
 ENV SOLR_USER solr
 ENV SOLR_UID 1000
