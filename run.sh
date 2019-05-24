@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 if [ -e /solr/init.sh ];then
 	source /solr/init.sh
